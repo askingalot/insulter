@@ -1,0 +1,1 @@
+from .insulter import Insulter

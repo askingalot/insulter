@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>Insulter</title>
+  <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class='page'>
+  <h1>Insulter</h1>
+  <div class='metana'>
+    {% for message in get_flashed_messages() %}
+      <div class='flash'>{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+  </div>
+  <a href='{{ url_for("index") }}'>Reload</a>
+</div>
+</body>
+</html>
